@@ -1,7 +1,55 @@
+
+
 .App {
   text-align: center;
+ 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
+.buttons {
+  position: relative;
+  /* margin: auto auto 0; */
+  margin-right: 0px;
+  display: flex;
+  padding-right: 0px;
+}
+.check {
+  
+  background-color: grey;
+  border-style: none;
+  color: #20bf6b;
+
+}
+
+
+.box {
+  display: flex;
+  width: fit-content;
+  
+}
+.list {
+  padding:2px;
+  padding-left: 20px;
+  padding-right: 60px;
+  margin: 15px;
+  display: block;
+  border: 2px solid black ;
+  border-radius: 20px;
+  /* border-style: none; */
+  background-color: grey;
+  color: rgb(4, 3, 20);
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+  
+}
+
+.input {
+  height: 30px;
+  width: 300px;
+  border-radius: 10px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,18 +62,68 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #282c46;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.dsp {
+  display: flex;
+}
+
+#edit {
+  background-color: gray;
+  border-style: none;
+   padding-top: 33px;
+  padding-left: 10px;
+  
+}
+
+#edit:hover {
+  color: blue;
+}
+
+#btn {
+  height: 30px;
+  width: 150px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+}
+
+#btn:hover {
+  background-color: #20bf6b;
+}
+
+#btn2 {
+
+  
+  border-style: none;
+  padding-left: 40px;
+  padding-top: 33px;
+  
+  background-color: grey;
+  color: black;
+  
+}
+
+#btn2:hover {
+  color: red;
+}
+
+#rmv{
+  position:fixed;
+  margin-left: 100px;
+
 }
 
 @keyframes App-logo-spin {
