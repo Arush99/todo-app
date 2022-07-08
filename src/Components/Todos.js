@@ -23,23 +23,24 @@ function Todos(props) {
   const [input, setInput] = useState("");
   const [toggleSubmit, setToggleSubmit] = useState(true);
   const [isEdit, setIsEdit] = useState(null);
-  // const [joke, setJoke] = useState("");
 
-  // check box
-  const [checked, setChecked] = useState(false);
-  const [isDone, setIsDone] = useState(false);
-  const label = { inputProps: { "aria-label": "mark as done" } };
+  // check box...................
+  // const [checked, setChecked] = useState(false);
+  // const [isDone, setIsDone] = useState(false);
+  // const label = { inputProps: { "aria-label": "mark as done" } };
 
-  function markDone(id) {
-    console.log(id);
-    setIsDone((prevItems) => {
-      return !prevItems;
-    });
-  }
+  // function markDone(id) {
+  //   console.log(id);
+  //   setIsDone((prevItems) => {
+  //     return !prevItems;
+  //   });
+  // }
 
-  const toggleCheckbox = (e) => {
-    setChecked(e.target.checked);
-  };
+  // const toggleCheckbox = (e) => {
+  //   setChecked(e.target.checked);
+  // };
+
+  // checbox end .......................
 
   // add item to list
   const addTodo = (e) => {
@@ -50,7 +51,7 @@ function Todos(props) {
       setTodos(
         todos.map((elem) => {
           if (elem.id === isEdit) {
-            return { ...elem, name: input };
+            return { ...elem, name: input.toUpperCase() };
           }
           return elem;
         })
@@ -133,12 +134,7 @@ function Todos(props) {
             {todos.map((elem) => {
               return (
                 <div className="box" key={elem.id}>
-                  <li
-                    style={{
-                      textDecoration: isDone ? "line-through" : "none",
-                      color: isDone ? "green" : "black",
-                    }}
-                  >
+                  <li>
                     <h3>{elem.name}</h3>
                   </li>
                   <div className="buttons">
@@ -148,16 +144,6 @@ function Todos(props) {
                     <i id="edit">
                       <EditIcon onClick={() => editItems(elem.id)} />
                     </i>
-
-                    <button className="check" type="checkbox">
-                      <Checkbox
-                        {...label}
-                        color="success"
-                        checked={checked}
-                        onChange={toggleCheckbox}
-                        onClick={() => markDone(elem.id)}
-                      />
-                    </button>
                   </div>
                 </div>
               );
